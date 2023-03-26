@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkk8dnwgi2j0o"]
+
+[ext_resource type="Script" path="res://debug/DebugMenu.cs" id="1_dwoed"]
+
+[sub_resource type="SystemFont" id="SystemFont_wjtcm"]
+
+[node name="DebugMenu" type="CanvasLayer"]
+script = ExtResource("1_dwoed")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 314.0
+offset_bottom = 132.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 304.0
+offset_bottom = 126.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_wjtcm")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[color=#2ecc71][ SUCCESS ]  Success![/color]
+[color=#e74c3c][ ERROR ]  Error... Something went wrong![/color]
+[color=#f1c40f][ WARN ]  Warning... Explosions![/color]
+[color=#ecf0f1][ INFO ]  Information... Cool.[/color]"
+scroll_following = true
