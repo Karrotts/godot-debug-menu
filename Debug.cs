@@ -56,6 +56,18 @@ public class Debug {
         }
     }
 
+    /// <summary>
+    /// Clears the debug menu
+    /// </summary>
+    public void Clear() {
+        if (debugMenu != null) {
+            debugMenu.GetNode<RichTextLabel>("Panel/RichTextLabel").Text = "";
+        }
+        else {
+            GD.PrintErr("Debug was not set to a valid DebugMenu Scene.");
+        }
+    }
+
     private string colorToHex(Color color) { 
         return "#" + color.R8.ToString("X2") + color.G8.ToString("X2") + color.B8.ToString("X2");
     }
